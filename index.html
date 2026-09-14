@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CURRENCY CONVERTER</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="hero-container">
+        <!-- Top Half round -->
+        <div class="top-section">
+            <div class="content">
+                <h1>Currency Converter</h1>
+                <p>Convert world currencies in real time.</p>
+            </div>
+        </div>
+
+    <div class="currency-decoration"></div>
+
+    <div id="converterBox">
+
+            <div class="conversions">
+                <div class="txt"><em>from</em></div>
+                <div class="conversionDigits">
+                    <input type="number" id="fromAmount" placeholder="Enter amount">
+                    <img src="https://flagcdn.com/h20/in.png" />
+                    <div class="custom-select" id="fromCurrency">
+                        <div class="selected" data-value="INR">INDIAN Rupee <span>▾</span></div>
+                        <div class="options">
+                            <div data-value="INR">INDIAN Rupee</div>
+                            <div data-value="USD">US Dollar</div>
+                            <div data-value="EUR">Euro</div>
+                            <div data-value="GBP">British Pound</div>
+                            <div data-value="CAD">Canadian Dollar</div>
+                            <div data-value="AUD">Australian Dollar</div>
+                            <div data-value="AED">Emirati Dhiram</div>
+                            <div data-value="IDR">Indonesian Rupiah</div>
+                            <div data-value="JPY">Japanese Yen</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div><button id="invertBtn">&#x2191&#x2193</button></div>
+
+            <div class="conversions">
+                <div class="txt"><em>to</em></div>
+                <div class="conversionDigits">
+                    <input type="number" id="toAmount" placeholder="-">
+                    <img src="https://flagcdn.com/h20/us.png"/>
+                    <div class="custom-select" id="toCurrency">
+                        <div class="selected" data-value="USD">US Dollar <span>▾</span></div>
+                        <div class="options">
+                            <div data-value="INR">INDIAN Rupee</div>
+                            <div data-value="USD">US Dollar</div>
+                            <div data-value="EUR">Euro</div>
+                            <div data-value="GBP">British Pound</div>
+                            <div data-value="CAD">Canadian Dollar</div>
+                            <div data-value="AUD">Australian Dollar</div>
+                            <div data-value="AED">Emirati Dhiram</div>
+                            <div data-value="IDR">Indonesian Rupiah</div>
+                            <div data-value="JPY">Japanese Yen</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div><button id="convertBtn">Get Exchange Rates</button></div>
+
+            <p id="result">Exchange Rates will appear here!</p>
+            <p id="resultTime"></p>
+            
+        </div>
+        <script src="countries.js"></script>
+        <script src="script.js"></script>
+</body>
+
+</html>

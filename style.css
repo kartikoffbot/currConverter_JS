@@ -1,0 +1,261 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color:#F4F0E8;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  text-align: center;
+  margin-top: 0px;
+}
+.hero-container {
+  min-height: 100vh;
+  position: relative;
+}
+.top-section {
+  position: relative;
+  height: 50vh;
+  background-color: #1a5445;
+  color: #EAE6DF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem;
+  border-bottom-left-radius: 60% 15%;
+  border-bottom-right-radius: 60% 15%;
+}
+
+/* Content inside Top Section */
+.content {
+  text-align: center;
+  margin-bottom: 5.5rem;
+}
+.content h1 {
+  color: #F5F0DC;
+  font-size: 2.35rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  font-family: Georgia, "Times New Roman", serif;
+  letter-spacing: -0.02em;
+}
+
+.content p {
+  color: #D4AF6A;
+  font-size: 1rem;
+  letter-spacing: 0.08em;
+}
+
+.currency-decoration {
+    height: 400px;
+
+    background-image: url("currency.png");
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: 100% auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.currency-decoration::before {/*makes the currency image darker*/
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background-image: url("currency.png");
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: 100% auto;
+
+    filter: brightness(0.75);
+}
+
+.conversions {
+  margin-bottom: 0.75rem;
+}
+
+.txt {
+  color: #4A4035;
+  text-align: left;
+  margin-left: 35px;
+  line-height: 5px;
+  margin-bottom: 0.4rem;
+  letter-spacing: 0.08em;
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+.conversionDigits {
+  display: flex;
+  align-items: center;
+  background-color:#F5F0DC;
+  border: 1px solid #cbd5e1;
+  border-radius: 0.75rem;
+  padding: 0rem 0rem;
+  transition: all 0.2s ease;
+  width: 90%;         /*shrink it */
+ margin: 0 auto; 
+}
+.conversionDigits:focus-within {
+  border-color: #059669;
+  box-shadow: 0 0 0 3px rgba(5, 150, 105, 0.15);
+  background-color: #ffffff;
+}
+.conversionDigits input {
+  flex: 1;
+  border: none;
+  background: transparent;
+  padding: 0.75rem;
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  color: #051436;
+  outline: none;
+  width: 100%;
+}
+
+.conversions img{
+  max-width: 2rem;
+}
+
+
+.custom-select {
+  position: relative;
+  width: 45%;
+  margin: 5px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #334155;
+}
+
+.custom-select .selected {
+  padding: 0.75rem 0.5rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.custom-select .options {
+  display: none; /* Hidden by default */
+  max-height: 200px;       /* adjust to however tall you want it */
+  overflow-y: auto;        /* scrollbar appears only when content exceeds max-height */
+  overflow-x: hidden;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background: #F5F0DC;
+  border: 1px solid #C9A44C;
+  border-radius: 8px;
+  /*overflow: hidden;*/
+  z-index: 20;
+}
+/*Space between(Descendant Selector):   .custom-select .options	An element with class options located inside an element with class custom-select.
+
+No Space between(Compound Selector):    .options.open	A single element that has both classes (options AND open) at the exact same time.
+*/
+.custom-select .options.open {
+  display: block;
+}
+
+.custom-select .options div {
+  padding: 0.7rem;
+  cursor: pointer;
+}
+
+.custom-select .options div:hover {
+  background: #245B68;
+  color: #F5F0DC;
+}
+
+
+input, select, button {
+  padding: 8px;
+  font-size: 16px;
+  margin: 5px;
+  margin-top:30;
+}
+
+#convertBtn {
+  width: 55%;
+  background-color:/* #059669 */#174C3F/*#4CAF50   initial color*/;
+ color: #F5F0DC;
+  border:1px solid #C9A44C;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+#convertBtn:hover {
+  /*background-color:*/  background: radial-gradient(circle, #d4af37, #aa820a);/*#047857*/;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.7), 0 0 20px rgba(212, 175, 55, 0.5);
+}
+
+#invertBtn {
+  /*background-color: #1c5766;
+  color: rgb(228, 209, 156);
+  border: 1px solid #cbd5e1;*/
+   background: #174C3F;
+  color: #E5C76B;
+  border: 2px solid #C9A44C;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.06);
+  transition: transform 0.2s ease, background-color 0.2s ease;
+  position: relative;
+  z-index: 2;
+ margin: -1.25rem auto;
+}
+
+#invertBtn:hover {
+  background: #C9A44C;
+  color: #174C3F;
+  border-color: #E5C76B;
+  transform: rotate(180deg);
+  box-shadow: 0 0 12px rgba(201, 164, 76, 0.45);
+}
+
+#result {
+  color: #4A4035;
+  font-size: 22px;
+  font-weight: 600;
+  margin-top: 22px;
+  letter-spacing: 0.02em;
+}
+#resultTime {
+  color: #4A4035;
+  font-size: 16px;
+  font-weight: 400;
+  margin-top: 5px;
+  letter-spacing: 0.02em;
+}
+#converterBox {
+  box-sizing: border-box;
+  border: 3px solid #C9A44C;
+  background: linear-gradient(135deg, #D4B45F, #ecdcab);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  /*box-shadow: 0 12px 35px rgba(0, 0, 0, 0.3), 0 0 15px rgba(212, 175, 55, 0.2);*/
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.3), 0 0 15px rgba(212, 175, 55, 0.2);
+  line-height: 20px;
+  border-radius: 50px;
+  padding: 20px;
+  margin: 0 auto;/* centers it on the page */
+  position: absolute;
+  top: 55vh; /* Matches top-section height */
+  left: 50%;
+  transform: translate(-50%, -50%); /* Centers card horizontally & vertically on line */
+  width: 90%;
+  max-width: 500px;
+  z-index: 10;
+
+}
+#converterBox:hover{
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.7), 0 0 20px rgba(212, 175, 55, 0.5);
+  transform: translate(-50%, -50%); /* Slightly lifts the box up on hover */
+}
