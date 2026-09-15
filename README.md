@@ -7,7 +7,7 @@ This was my first web development project, built as a way to practice DOM manipu
 
 ## 🔗 Live Demo
 
-[Add your live demo link here, e.g. GitHub Pages / Netlify / Vercel]
+https://kartikoffbot.github.io/currConverter_JS/
 
 
 ## ✨ Features
@@ -23,7 +23,7 @@ This was my first web development project, built as a way to practice DOM manipu
 - **HTML5** – structure of the application
 - **CSS** – styling and layout
 - **JavaScript** – logic, DOM manipulation, and API integration
-- **[Exchange Rate API Name]** – for fetching daily currency exchange rates
+- **[Exchange Rate API]** – for fetching daily currency exchange rates
 
 ## 📂 Project Structure
 
